@@ -1,0 +1,227 @@
+.calendar-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: cadetblue;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.calendar-header-middle{
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scrolling-arrows{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.month_lbl{
+  font-size: 2.0em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.calendar-week{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+.calendar-days{
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calendar-days > div{
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 30px;
+}
+
+.clink{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.prev-date, .next-date{
+  background-color: #ddd;
+}
+
+.training-content{
+  /* background-color: #54626F; */
+  min-height: 60%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: .85em;
+}
+
+.notraining{
+  background-color: #373737; 
+  padding: 3px 15px; 
+  border-radius: 10px;
+}
+
+.training-day{
+  cursor: pointer;
+}
+
+.training-day:hover{
+  background-color: #FBCEB1 !important;
+}
+
+.training-lbl{
+  width: 15px;
+  height: 15px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: darkgreen;
+}
+
+.seldate{
+  color: darkgreen;
+  font-size: 1.8em;
+}
+
+.seldate-container{
+  display: grid;
+  grid-template-columns: .5fr 3fr;
+}
+
+
+#eventcomments{
+  background-color: #E1EBEE;
+  min-height: 100px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#selectedates{
+  min-height: 150px;
+  width: 100%;
+  background-color:aliceblue;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.seldate-container{
+  background-color: #FBCEB1;
+  padding: 10px;
+  min-width: 100px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+[data-dayselected="1"]{
+  background-color: #FBCEB1;
+  cursor: pointer;
+}
+
+[data-dayselected="1"] > a:hover{
+  background-color: #ff6961;
+}
+
+/* hourly training calendar css */
+.hr-training-day{
+  background-color: rgba(202, 203, 205, 0.724);
+  margin-bottom: 10px;
+  padding: 5px;
+}
+/* end of hourly training calendar css */
+
+.date-box-container{
+  background-color: #000;
+  display: flex;
+  padding: 5px;
+  /* width: 10%; */
+}
+@media only screen and (max-width: 750px) {
+  .date-box-container{
+    /* width: 20%; */
+  }
+}
+
+.date-box{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+}
+
+.wday{
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.led-green {
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+
+.hr-training-day{
+  display: grid;
+  grid-template-columns: .5fr 2fr 2fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
+.tr-times{
+  display: flex;
+}
+
+.time-cont{
+  background-color: #39a842;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: #fff;
+}
+
+#booking-summary{
+  position:absolute;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  background-color:#f0dfdf;
+  display: none;
+  min-height: 150px;
+  width: 40%;
+  float: right;
+  position: sticky;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+@media only screen and (max-width: 750px) {
+  #booking-summary{
+    width: 100%;
+  }
+
+}
+
+.hr-trianing-calendar{
+  position: relative;
+}
